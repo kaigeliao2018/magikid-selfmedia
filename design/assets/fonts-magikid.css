@@ -1,0 +1,31 @@
+/*
+ * Magikid 课件字体表 · fonts-magikid.css
+ * 用途：替换 html-ppt 默认 fonts.css，解决 Google Fonts 在中国网络加载失败问题
+ * 做法：用 fonts.loli.net 镜像 + 系统字体兜底
+ * 使用：在 html 文件中将 fonts.css 的引用替换为本文件的路径
+ */
+
+/* ── 标题字体：Barlow Condensed（粗黑科技感，适合 VEX 风格）── */
+@import url('https://fonts.loli.net/css2?family=Barlow+Condensed:wght@600;700;800;900&display=swap');
+
+/* ── 正文字体：Inter（英文）+ Noto Sans SC（中文）── */
+@import url('https://fonts.loli.net/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+
+/* ── 代码字体：JetBrains Mono ── */
+@import url('https://fonts.loli.net/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/*
+ * 系统字体兜底（网络完全断开时使用）
+ * macOS: PingFang SC / SF Pro
+ * Windows: Microsoft YaHei / Segoe UI
+ * Android: Noto Sans SC
+ */
+
+:root {
+  /* 覆盖 html-ppt 的字体变量 */
+  --font-display: 'Barlow Condensed', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, sans-serif;
+  --font-sans:    'Inter', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-serif:   'Noto Serif SC', 'Georgia', serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+}

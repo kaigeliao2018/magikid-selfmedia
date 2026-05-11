@@ -1,0 +1,135 @@
+/*
+ * Magikid × VEX IQ 品牌主题 · theme-magikid-vex.css
+ * 基于 2026-2027 VEX IQ Robotics Competition 官方课件模板提炼
+ * 用于 html-ppt skill：在 <link id="theme-link"> 中引用本文件
+ *
+ * 设计关键词：深黑科技、黄色霓虹、HUD界面、机甲风
+ */
+
+:root {
+  /* ── 背景系 ── */
+  --bg:          #060A0F;   /* 近黑深蓝底 */
+  --surface-1:   #0D1117;   /* 卡片底色 */
+  --surface-2:   #161C24;   /* 次级卡片 */
+  --surface-3:   #1E2733;   /* 悬浮层 */
+
+  /* ── 文字 ── */
+  --text-1:      #FFFFFF;
+  --text-2:      #A8B2C0;
+  --text-3:      #5C6B7A;
+
+  /* ── 强调色：VEX 黄 ── */
+  --accent:      #FFD000;   /* VEX 标志黄，标题/数字/高亮 */
+  --accent-dim:  rgba(255, 208, 0, 0.15);
+
+  /* ── 辅助色 ── */
+  --red:         #E53935;   /* L1/L2 章节标签、警告 */
+  --green:       #00E676;   /* SYSTEM ONLINE、成功状态 */
+  --blue:        #4FC3F7;   /* 信息/链接 */
+
+  /* ── 边框 / 线条 ── */
+  --border:      #1E2D3D;
+  --border-accent: rgba(255, 208, 0, 0.35);  /* 黄色 HUD 边框 */
+
+  /* ── 渐变 ── */
+  --grad:        linear-gradient(135deg, #FFD000 0%, #FF8C00 100%);
+  --grad-dark:   linear-gradient(180deg, rgba(255,208,0,0.08) 0%, transparent 100%);
+
+  /* ── 字体（配合 fonts-magikid.css 使用）── */
+  --font-display: 'Barlow Condensed', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-sans:    'Inter', 'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+
+  /* ── 字号（h1 放大，适配 VEX 大标题风格）── */
+  --letter-tight: -0.03em;
+
+  /* ── 圆角（VEX 模板较方正）── */
+  --radius:       6px;
+  --radius-lg:    10px;
+
+  /* ── 阴影 ── */
+  --shadow-sm:    0 1px 4px rgba(0,0,0,0.6);
+  --shadow-md:    0 4px 16px rgba(0,0,0,0.7);
+  --shadow-lg:    0 0 0 1px var(--border-accent), 0 8px 32px rgba(255,208,0,0.1);
+}
+
+/* ── 全局 body 背景 ── */
+body { background: var(--bg); }
+
+/* ── h1 标题放大为 VEX 大字风格 ── */
+.h1, h1.title {
+  font-size: clamp(52px, 6vw, 80px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.h2, h2.title {
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* ── accent 高亮改为 VEX 黄 ── */
+.accent { color: var(--accent) !important; }
+
+/* ── card 边框 HUD 风格 ── */
+.card {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.card-accent {
+  background: var(--surface-2);
+  border: 1px solid var(--border-accent);
+}
+
+/* ── kicker：VEX 章节标签风格（红色背景）── */
+.kicker {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: .2rem .6rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+/* ── num 编号用 VEX 黄 ── */
+.num { color: var(--accent) !important; border-color: var(--accent) !important; }
+
+/* ── rule-row 左边框改黄色 ── */
+.rule-row { border-left: 2px solid var(--accent); padding-left: 1rem; }
+
+/* ── HUD 角落装饰（给 slide 增加科技感）── */
+.slide::before,
+.slide::after {
+  content: '';
+  position: absolute;
+  width: 24px; height: 24px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: .4;
+  pointer-events: none;
+  z-index: 0;
+}
+.slide::before { top: 16px; left: 16px; border-width: 2px 0 0 2px; }
+.slide::after  { bottom: 16px; right: 16px; border-width: 0 2px 2px 0; }
+
+/* ── deck-footer 底部状态栏 ── */
+.deck-footer {
+  border-top: 1px solid var(--border);
+  background: rgba(6,10,15,0.8);
+  color: var(--text-3);
+  font-size: .7rem;
+  letter-spacing: 1px;
+}
+
+/* ── progress bar 改黄色 ── */
+.deck-progress { background: var(--accent) !important; }
+
+/* ── 代码块 ── */
+.code-block { background: var(--surface-2); border: 1px solid var(--border-accent); }

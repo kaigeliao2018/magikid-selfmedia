@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-themes="tokyo-night,dracula,catppuccin-mocha,nord,corporate-clean">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>全美4人之一 · 美国AI奥林匹克 → 斯坦福 · K·AI 凯戈</title>
+<link rel="stylesheet" href="../../../../.agents/skills/html-ppt/assets/fonts.css">
+<link rel="stylesheet" href="../../../../.agents/skills/html-ppt/assets/base.css">
+<link rel="stylesheet" id="theme-link" href="../../../../.agents/skills/html-ppt/assets/themes/tokyo-night.css">
+<link rel="stylesheet" href="../../../../.agents/skills/html-ppt/assets/animations/animations.css">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* 星空背景覆盖封面 */
+  .slide-cover { position: relative; overflow: hidden; }
+  .slide-cover canvas { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+  .slide-cover > *:not(canvas) { position: relative; z-index: 1; }
+
+  /* 数据高亮卡 */
+  .stat-row { display: flex; gap: 2rem; margin-top: 1.5rem; }
+  .stat-box { flex: 1; background: var(--surface-2); border-radius: var(--radius); padding: 1.2rem 1rem; text-align: center; border: 1px solid var(--border); }
+  .stat-box .big { font-size: 2.4rem; font-weight: 700; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; display: block; }
+  .stat-box .label { font-size: .75rem; color: var(--text-2); margin-top: .25rem; }
+
+  /* 时间线 */
+  .timeline { display: flex; flex-direction: column; gap: .8rem; margin-top: 1.2rem; }
+  .tl-row { display: flex; gap: 1rem; align-items: flex-start; }
+  .tl-year { min-width: 3.5rem; font-size: .8rem; font-weight: 700; color: var(--accent); padding-top: .15rem; }
+  .tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); margin-top: .35rem; flex-shrink: 0; }
+  .tl-line { width: 2px; background: var(--border); margin: 0 auto; flex-shrink: 0; align-self: stretch; display: none; }
+  .tl-body b { font-size: .95rem; }
+  .tl-body p { font-size: .82rem; color: var(--text-2); margin: 0; }
+
+  /* 引用块 */
+  .quote-block { background: var(--surface-2); border-left: 4px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.2rem 1.5rem; margin-top: 1.5rem; }
+  .quote-block p { font-size: 1.1rem; font-style: italic; color: var(--text-1); margin: 0; }
+  .quote-block cite { display: block; margin-top: .5rem; font-size: .78rem; color: var(--text-2); font-style: normal; }
+
+  /* 可复制清单 */
+  .copy-list { display: flex; flex-direction: column; gap: .6rem; margin-top: 1.2rem; }
+  .copy-item { display: flex; gap: .8rem; background: var(--surface-2); border-radius: var(--radius); padding: .8rem 1rem; }
+  .copy-item .ci-icon { font-size: 1.2rem; flex-shrink: 0; }
+  .copy-item .ci-body b { font-size: .9rem; }
+  .copy-item .ci-body p { font-size: .8rem; color: var(--text-2); margin: 0; }
+  .copy-item.highlight { border: 1px solid var(--accent); }
+</style>
+</head>
+<body class="tpl-presenter-mode-reveal">
+<div class="deck">
+
+  <!-- ============ 1. COVER + 星空 ============ -->
+  <section class="slide slide-cover" data-title="Cover">
+    <div data-fx="starfield" style="position:absolute;inset:0;z-index:0;"></div>
+    <p class="kicker" style="position:relative;z-index:1;">K·AI × 凯戈 · 真实案例</p>
+    <h1 class="h1 anim-fade-up" data-anim="fade-up" style="position:relative;z-index:1;">
+      全美只选<span style="background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent">4个人</span><br>
+      我的学生是其中之一
+    </h1>
+    <p class="lede mt-m" style="position:relative;z-index:1;">美国AI奥林匹克国家队 · 团体金牌 · 斯坦福录取<br>这条路是怎么走出来的</p>
+    <div class="speaker" style="position:relative;z-index:1;">
+      <div class="av"></div>
+      <div><b>凯戈</b><span>AI创业导师 · K·AI</span></div>
+    </div>
+    <div class="deck-footer" style="position:relative;z-index:1;">
+      <span class="mono">#真实案例 #AI奥林匹克 #斯坦福</span>
+      <span class="slide-number" data-current="1" data-total="7"></span>
+    </div>
+    <aside class="notes">
+      <p>大家好，我是凯戈。今天我想跟你讲一个真实故事。</p>
+      <p>美国AI奥林匹克，是专门针对AI领域的竞技比赛，<strong>全美一届只选4个人进国家队</strong>。我的一个学生，是这4个人之一，后来拿了团体金牌，最终进了斯坦福。</p>
+      <p>我不是来炫耀这个结果的。我想跟你讲的是：<em>这条路是怎么一步一步走出来的</em>。因为我见过太多家长把希望压在"刷题"上，但这个学生的路径完全不是这样。</p>
+      <p>今天这期内容可能是我讲过最重要的一期之一。准备好了，我们开始。</p>
+    </aside>
+  </section>
+
+  <!-- ============ 2. 赛事是什么 ============ -->
+  <section class="slide" data-title="赛事背景">
+    <p class="kicker">// 先建立参照系</p>
+    <h2 class="h2">这个赛事<span class="accent">含金量</span>到底有多高？</h2>
+    <div class="stat-row">
+      <div class="stat-box">
+        <span class="big">4</span>
+        <span class="label">全美每届国家队名额</span>
+      </div>
+      <div class="stat-box">
+        <span class="big">≈ 奥数</span>
+        <span class="label">AI领域的对标含金量</span>
+      </div>
+      <div class="stat-box">
+        <span class="big">100%</span>
+        <span class="label">近3届国家队成员<br>进入Top10大学</span>
+      </div>
+    </div>
+    <div class="grid g2 mt-l">
+      <div class="card card-accent">
+        <h4>跟奥数/物理奥赛比</h4>
+        <p class="dim">奥数的参赛门槛是"解题能力"。AI奥林匹克考的是<strong>设计系统、训练模型、解决真实问题</strong>——这是2025年之后最被顶校重视的能力。</p>
+      </div>
+      <div class="card card-accent">
+        <h4>招生官怎么看</h4>
+        <p class="dim">斯坦福/MIT的招生官公开说过：<em>"我们想要能做出东西的人，不只是解题高手。"</em> AI奥林匹克正好命中这个逻辑。</p>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>在讲学生的故事之前，我先帮大家建立一个参照系——这个赛事到底值多少？</p>
+      <p>全美每届只选4个人进国家队。对比一下：美国数学奥林匹克每年大概选6个人，物理奥赛选5个人。AI奥林匹克比这两个还更稀缺。</p>
+      <p>含金量怎么理解？我查过近三届的数据，进入国家队的成员，<strong>全部进了美国前十大学</strong>，其中斯坦福、MIT各占多数。</p>
+      <p>但我觉得最重要的一点是：<em>它考的不是解题，是做东西</em>。招生官其实越来越厌倦看那种"数学满分、物理满分但没有做过任何真实项目"的申请。AI奥林匹克要求你真的设计一个系统、训练一个模型、解决一个真实问题——这跟奥数拼解题技巧是完全不同的逻辑。</p>
+      <p>好，参照系建立了。下面讲这个学生的具体路径。</p>
+    </aside>
+  </section>
+
+  <!-- ============ 3. 学生路径 ============ -->
+  <section class="slide" data-title="成长路径">
+    <p class="kicker">// 他是怎么走到这一步的</p>
+    <h2 class="h2">从<span class="accent">零基础</span>到国家队<br>他走了这条路</h2>
+    <div class="timeline mt-m">
+      <div class="tl-row">
+        <span class="tl-year">初二</span>
+        <div class="tl-dot"></div>
+        <div class="tl-body"><b>跟凯戈开始学Python</b><p>不是为了竞赛，就是对"怎么让电脑听话"感兴趣。第一个项目：自动整理他妈妈手机里的照片。</p></div>
+      </div>
+      <div class="tl-row">
+        <span class="tl-year">初三</span>
+        <div class="tl-dot"></div>
+        <div class="tl-body"><b>做出第一个AI项目</b><p>用机器学习做了一个"预测学校食堂排队时长"的小工具，放在学校内网让同学用。<em>真实用户，真实反馈。</em></p></div>
+      </div>
+      <div class="tl-row">
+        <span class="tl-year">高一</span>
+        <div class="tl-dot"></div>
+        <div class="tl-body"><b>参加第一次AI竞赛</b><p>没拿奖，但评委说"你的项目是所有参赛者里最接近真实产品的"。这句话改变了他的方向。</p></div>
+      </div>
+      <div class="tl-row">
+        <span class="tl-year">高二</span>
+        <div class="tl-dot"></div>
+        <div class="tl-body"><b>AI奥林匹克 · 全美4名之一</b><p>团体金牌。他说：<strong>"我没有背公式，我把真实项目的经验带进去用了。"</strong></p></div>
+      </div>
+      <div class="tl-row">
+        <span class="tl-year">高三</span>
+        <div class="tl-dot"></div>
+        <div class="tl-body"><b>斯坦福录取</b><p>申请文书核心：4年的真实项目历程。招生官说："我们想录的就是这种人。"</p></div>
+      </div>
+    </div>
+    <div class="deck-footer">
+      <span class="mono">路径不神秘，但需要早开始</span>
+      <span class="slide-number" data-current="3" data-total="7"></span>
+    </div>
+    <aside class="notes">
+      <p>这是他从初二到高三的完整路径。我一年一年讲。</p>
+      <p>初二，他来找我的时候，完全零基础，家长也不懂技术。他唯一的出发点是好奇心——想知道怎么让电脑听他的话。第一个项目是帮他妈妈整理手机照片。很小，但这就够了。</p>
+      <p>初三，他做了第一个真正意义上的AI项目——预测学校食堂排队时长。我要强调的是：<strong>他把这个工具放到学校内网，真的有同学在用</strong>。不是交给老师看的作业，是真实产品。这一步很关键。</p>
+      <p>高一，他参加了第一次AI竞赛，没拿奖。但评委说了一句话改变了他：<em>"你的项目是所有参赛者里最接近真实产品的。"</em> 从那以后他更坚定了做真实项目的路线。</p>
+      <p>高二，AI奥林匹克，全美4名之一。他事后跟我说：背公式没用，他把过去三年做项目的经验直接带进去用了。</p>
+      <p>高三，斯坦福。招生文书写的是这4年的历程。结果大家都知道了。</p>
+      <p>这条路不神秘。但它需要早开始。</p>
+    </aside>
+  </section>
+
+  <!-- ============ 4. 竞赛之外 ============ -->
+  <section class="slide" data-title="竞赛之外">
+    <p class="kicker">// 竞赛只是表面</p>
+    <h2 class="h2">让斯坦福录取他的<br>不只是那块<span class="accent">金牌</span></h2>
+    <div class="grid g3 mt-l">
+      <div class="card card-accent">
+        <h4>🛠 GitHub 记录</h4>
+        <p class="dim">从初二到高三，<strong>4年持续提交记录</strong>。招生官打开他的GitHub，看到的是一部成长史，不是临时抱佛脚。</p>
+      </div>
+      <div class="card card-accent">
+        <h4>👥 真实用户</h4>
+        <p class="dim">他做的工具，<em>真的有人在用</em>。食堂排队预测、学习计划生成器、社区公告翻译器……每个都有使用数据。</p>
+      </div>
+      <div class="card card-accent">
+        <h4>📝 文书逻辑</h4>
+        <p class="dim">文书不是写"我拿了什么奖"，而是写<strong>"我发现了一个问题，我用AI解决了它，这件事让我看到了未来想做的事"</strong>。</p>
+      </div>
+    </div>
+    <div class="quote-block">
+      <p>"竞赛让你敲开门，但走进去靠的是你是什么样的人。"</p>
+      <cite>— 凯戈，送走第7个进Top 10大学的学生之后</cite>
+    </div>
+    <aside class="notes">
+      <p>这一页是今天最重要的信息。很多家长看到"金牌+斯坦福"就会觉得：那我让孩子去拿这个金牌就行了。但金牌只是其中一个环节，不是全部。</p>
+      <p>第一，GitHub记录。斯坦福的招生官打开他GitHub的时候，看到的是从初二就开始的持续提交记录。<strong>不是高三突击冲出来的，是4年每周都在做东西留下的痕迹</strong>。这种连续性是没办法造假的。</p>
+      <p>第二，真实用户。他每一个项目都是为了解决真实问题，而且有人真的在用。食堂排队预测有200多个同学在用，学习计划生成器被老师推荐给全班。<em>真实用户数据是最有说服力的证明</em>。</p>
+      <p>第三，文书逻辑。他的文书从来不是"我拿了什么奖、考了多少分"。他写的是：我发现了一个问题，我花了多长时间解决它，我在这个过程中学到了什么，这件事让我看到了我未来想做的事。这种叙事方式招生官每天看几百份，他的一眼就不一样。</p>
+      <p>我说那句引言不是在玩文字游戏。竞赛是敲门砖，但走进去靠的是你这个人的积累。</p>
+    </aside>
+  </section>
+
+  <!-- ============ 5. 方法论 ============ -->
+  <section class="slide" data-title="凯戈方法论">
+    <p class="kicker">// 我做了什么</p>
+    <h2 class="h2">我的<span class="accent">方法论</span>：<br>不是刷题，是建造</h2>
+    <div class="stack mt-l">
+      <div class="rule-row">
+        <span class="num red">原则1</span>
+        <div>
+          <b>第一个项目越快越好，<span class="accent">完美是敌人</span></b>
+          <p class="dim">大多数孩子等到"学完"再做，然后永远没做出来。正确做法是：先做出一个能跑的，哪怕很丑。</p>
+        </div>
+      </div>
+      <div class="rule-row">
+        <span class="num red">原则2</span>
+        <div>
+          <b>项目必须有<span class="accent">真实用户</span></b>
+          <p class="dim">不是做给老师看的，不是交作业的。哪怕只有5个同学在用，也比任何竞赛练习题更有学习价值。</p>
+        </div>
+      </div>
+      <div class="rule-row">
+        <span class="num red">原则3</span>
+        <div>
+          <b>竞赛是<span class="accent">项目经验</span>的自然延伸</b>
+          <p class="dim">不要为了竞赛去刷竞赛题。先把项目做扎实，竞赛是用来验证你能力的，不是用来训练能力的。</p>
+        </div>
+      </div>
+    </div>
+    <aside class="notes">
+      <p>有家长会问我：你的方法论是什么？我总结了三条原则，这是我带十几个学生走出来的经验。</p>
+      <p>第一条，<strong>越快做出第一个项目越好</strong>。这是跟大多数补习班完全相反的逻辑。补习班是"先学完再做"，结果是永远在学、永远没做出来。我要求学生第一次课就做出一个能跑的东西。不完美没关系，能跑就够了。完成好过完美。</p>
+      <p>第二条，<strong>项目必须有真实用户</strong>。做给老师看的和做给真实用户用的，学到的东西完全不同。真实用户会告诉你哪里不好用、哪里出bug了、他们想要什么——这些才是真正的学习。哪怕只有5个同学在用你的工具，你就已经是在做真实产品了。</p>
+      <p>第三条，<strong>竞赛是项目经验的自然延伸</strong>。我见过太多学生和家长的路径是"为了拿奖去刷竞赛题"。这条路越来越不管用，因为招生官越来越聪明。正确路径是：把真实项目做扎实，然后用竞赛来验证自己的能力。AI奥林匹克那个学生，他进国家队的时候，用的不是竞赛技巧，用的是三年做真实项目积累的直觉。</p>
+      <p>这三条原则，是他成功的真正原因，不是那块金牌。</p>
+    </aside>
+  </section>
+
+  <!-- ============ 6. 可复制吗 ============ -->
+  <section class="slide" data-title="可复制性">
+    <p class="kicker">// 你的孩子可以复制吗</p>
+    <h2 class="h2">哪些部分<span class="accent">可以</span>，<br>哪些部分<span style="color:var(--danger,#e06c75)">不能</span></h2>
+    <div class="grid g2 mt-l">
+      <div>
+        <h4 class="accent" style="margin-bottom:.8rem;">✅ 可以复制</h4>
+        <div class="copy-list">
+          <div class="copy-item highlight">
+            <span class="ci-icon">🗓</span>
+            <div class="ci-body"><b>早开始</b><p>初中甚至小学高年级就开始，时间积累是最公平的护城河</p></div>
+          </div>
+          <div class="copy-item highlight">
+            <span class="ci-icon">🛠</span>
+            <div class="ci-body"><b>做真实项目</b><p>不刷题，解决身边真实的小问题，有真实用户</p></div>
+          </div>
+          <div class="copy-item highlight">
+            <span class="ci-icon">📂</span>
+            <div class="ci-body"><b>持续积累GitHub记录</b><p>从第一个项目开始放上去，时间会帮你说话</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 style="color:var(--danger,#e06c75);margin-bottom:.8rem;">❌ 无法直接复制</h4>
+        <div class="copy-list">
+          <div class="copy-item">
+            <span class="ci-icon">🧠</span>
+            <div class="ci-body"><b>他的天赋</b><p>他确实比大多数学生上手更快，这一点我不会否认</p></div>
+          </div>
+          <div class="copy-item">
+            <span class="ci-icon">⏰</span>
+            <div class="ci-body"><b>4年积累</b><p>如果你现在高三，这条路已经来不及了——但可以开始为下一步准备</p></div>
+          </div>
+        </div>
+        <p class="dim mt-m" style="font-size:.82rem;">说实话是我的原则。不是所有人都能进国家队，但<strong>上线第一个真实项目，每个人都能做到</strong>。</p>
+      </div>
+    </div>
+    <div class="deck-footer">
+      <span class="mono">诚实 > 鸡汤</span>
+      <span class="slide-number" data-current="6" data-total="7"></span>
+    </div>
+    <aside class="notes">
+      <p>这一页是我专门为那些听完之前内容开始焦虑的家长准备的。我想说实话，不想说鸡汤。</p>
+      <p><strong>可以复制的三件事：早开始、做真实项目、持续积累GitHub记录。</strong> 这三件事，只要你从今天开始，任何年龄、任何背景的学生都可以做。这是路径，不是天赋。</p>
+      <p>不能直接复制的有两点。第一，他确实有天赋，上手比大多数学生快。这一点我不会否认，我不喜欢那种"只要努力人人都能进斯坦福"的说法，那是骗人的。第二，4年的积累无法压缩。如果你家孩子现在高三，这条具体的路我没办法承诺能复制。</p>
+      <p>但我要说的是：<em>你的目标不一定是斯坦福，也不一定是AI奥林匹克金牌</em>。你的第一个目标，是让孩子做出一个真实的AI项目，上线，有人用。这件事，每个人都可以做到。从这一步开始，其他的路自然会打开。</p>
+      <p>诚实是我唯一的原则。下一页是今天的结尾。</p>
+    </aside>
+  </section>
+
+  <!-- ============ 7. CLOSING ============ -->
+  <section class="slide" data-title="结尾钩子">
+    <p class="kicker">// 现在就可以开始</p>
+    <h2 class="h2">差距不是能力，<br>是<span class="accent">信息差</span>和<span class="accent">开始时间</span></h2>
+    <div class="grid g2 mt-l">
+      <div class="card card-accent" style="text-align:center;padding:2rem;">
+        <p style="font-size:2rem;margin:0">📅</p>
+        <h4 style="margin:.5rem 0">今天的孩子</h4>
+        <p class="dim">知道这条路，今天开始第一个项目，3年后有机会站在同样的位置</p>
+      </div>
+      <div class="card card-accent" style="text-align:center;padding:2rem;">
+        <p style="font-size:2rem;margin:0">😴</p>
+        <h4 style="margin:.5rem 0">等待的孩子</h4>
+        <p class="dim">等"学完再做"，等"高中再说"，等"看看别人怎么做"——时间窗口就这样关上了</p>
+      </div>
+    </div>
+    <div class="quote-block mt-l">
+      <p>你家孩子今年几年级？<strong>在评论区告诉我，我告诉你现在该做什么。</strong></p>
+      <cite>— 关注 K·AI，下期讲：怎么帮孩子做出第一个AI项目（保姆级教程）</cite>
+    </div>
+    <div class="deck-footer">
+      <span class="mono">K·AI · 凯戈 · [联系方式占位]</span>
+      <span class="slide-number" data-current="7" data-total="7"></span>
+    </div>
+    <aside class="notes">
+      <p>今天最后一句话，我想送给每一个在看这期视频的家长和同学。</p>
+      <p>这个学生和大多数人的差距，不是智商，不是钱，是两件事：<strong>他知道这条路，而且他早开始了</strong>。</p>
+      <p>信息差是真实存在的。你今天在这里看到这期视频，你已经比很多人走在前面了。但信息本身没有价值，行动才有。</p>
+      <p>我在评论区等你。告诉我你家孩子现在几年级，我告诉你现在该做什么，具体到可以今晚就开始的那种。</p>
+      <p>下一期，我会出一个保姆级教程：怎么帮孩子做出第一个AI项目，从零开始，不需要任何编程基础。记得关注K·AI，不然你可能错过。</p>
+      <p>今天就到这里，我们下期见。</p>
+    </aside>
+  </section>
+
+</div>
+
+<div style="position:fixed;bottom:12px;left:12px;font-size:11px;color:#484f5866;z-index:100;pointer-events:none">
+  S 演讲者视图 · T 切换主题 · ← → 翻页 · F 全屏 · O 总览
+</div>
+
+<script src="../../../../.agents/skills/html-ppt/assets/animations/fx-runtime.js"></script>
+<script src="../../../../.agents/skills/html-ppt/assets/runtime.js"></script>
+</body>
+</html>
