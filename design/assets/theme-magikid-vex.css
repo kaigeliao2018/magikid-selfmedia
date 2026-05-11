@@ -87,8 +87,8 @@ body { background: var(--bg); }
 /* ── kicker：VEX 章节标签风格（红色背景）── */
 .kicker {
   display: inline-block;
-  background: var(--red);
-  color: #fff;
+  background: var(--red) !important;
+  color: #fff !important;
   font-size: .7rem;
   font-weight: 700;
   letter-spacing: 2px;
